@@ -16,12 +16,12 @@
       font-family: 'Orbitron', sans-serif;
       background: radial-gradient(circle at center, #0b0f1a, #05060b);
       color: #e0e6f0;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      position: relative;
+      justify-content: flex-start;
+      padding-top: 4rem;
     }
 
     .glow {
@@ -30,13 +30,13 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 70%);
+      background: radial-gradient(circle, rgba(0,255,255,0.1), transparent 70%);
       animation: pulse 6s infinite ease-in-out;
       z-index: 0;
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.4; }
+      0%, 100% { transform: scale(1); opacity: 0.3; }
       50% { transform: scale(1.2); opacity: 0.1; }
     }
 
@@ -45,6 +45,7 @@
       z-index: 1;
       padding: 2rem;
       animation: fadeIn 2s ease-out;
+      max-width: 900px;
     }
 
     @keyframes fadeIn {
@@ -59,10 +60,16 @@
       color: #00f0ff;
     }
 
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #a9b8c8;
-      margin-bottom: 2rem;
+      margin-top: 0.5rem;
     }
 
     .btn {
@@ -74,6 +81,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      margin-top: 2rem;
     }
 
     .btn:hover {
@@ -97,6 +105,14 @@
     .nav a:hover {
       color: #00f0ff;
     }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem 0;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -104,14 +120,32 @@
 
   <div class="nav">
     <a href="#about">About</a>
-    <a href="#access">Access Terminal</a>
-    <a href="#contact">Contact</a>
+    <a href="#divisions">Divisions</a>
+    <a href="#careers">Careers</a>
+    <a href="/portal">Staff Portal</a>
   </div>
 
   <div class="container">
     <h1>CRYODYNE SYSTEMS</h1>
-    <p>Phase-9 Terraforming Division — Status: <span style="color:#ff4040">UNRESPONSIVE</span></p>
-    <a href="#access" class="btn">Access Secure Terminal</a>
+    <p>Advanced Terraforming, Atmospheric Control, and Off-World Infrastructure</p>
+
+    <h2 id="about">Who We Are</h2>
+    <p>CryoDyne Systems is a pioneering interplanetary development company focused on engineering the future of human colonization. We lead in autonomous terraforming, exoplanet logistics, and atmospheric stabilization solutions.</p>
+
+    <h2 id="divisions">Our Divisions</h2>
+    <p>
+      <strong>Echo Initiative</strong> – Deep-space resource retrieval & anomaly research<br>
+      <strong>Phase Development Group</strong> – Next-gen planetary biosphere engineering<br>
+      <strong>CryoFleet Operations</strong> – Off-world supply and fleet logistics
+    </p>
+
+    <h2 id="careers">Join the Future</h2>
+    <p>We're always looking for forward-thinkers, engineers, and mission-focused personnel. Explore our upcoming missions and off-world assignments by accessing our recruitment channel.</p>
+    <a href="#" class="btn">Explore Careers</a>
   </div>
+
+  <footer>
+    &copy; 2025 CryoDyne Systems. All rights reserved.
+  </footer>
 </body>
 </html>
