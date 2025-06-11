@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryoDyne Systems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0b0f1a, #05060b);
+      color: #e0e6f0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 70%);
+      animation: pulse 6s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.2); opacity: 0.1; }
+    }
+
+    .container {
+      text-align: center;
+      z-index: 1;
+      padding: 2rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+      color: #00f0ff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #a9b8c8;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #00f0ff;
+      color: #0b0f1a;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00b8cc;
+    }
+
+    .nav {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+    }
+
+    .nav a {
+      margin-left: 1rem;
+      color: #8899aa;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+
+  <div class="nav">
+    <a href="#about">About</a>
+    <a href="#access">Access Terminal</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="container">
+    <h1>CRYODYNE SYSTEMS</h1>
+    <p>Phase-9 Terraforming Division — Status: <span style="color:#ff4040">UNRESPONSIVE</span></p>
+    <a href="#access" class="btn">Access Secure Terminal</a>
+  </div>
+</body>
+</html>
