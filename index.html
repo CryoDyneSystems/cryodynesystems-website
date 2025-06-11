@@ -14,8 +14,8 @@
 
     body {
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at center, #0b0f1a, #05060b);
-      color: #e0e6f0;
+      background-color: #f4f7fa;
+      color: #1a1a1a;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -24,60 +24,39 @@
       padding-top: 4rem;
     }
 
-    .glow {
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(0,255,255,0.1), transparent 70%);
-      animation: pulse 6s infinite ease-in-out;
-      z-index: 0;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.2); opacity: 0.1; }
-    }
-
     .container {
       text-align: center;
-      z-index: 1;
       padding: 2rem;
-      animation: fadeIn 2s ease-out;
-      max-width: 900px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      max-width: 1000px;
+      width: 90%;
     }
 
     h1 {
       font-size: 3rem;
-      letter-spacing: 3px;
-      margin-bottom: 0.5rem;
-      color: #00f0ff;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      color: #2b2b2b;
     }
 
     h2 {
-      margin-top: 2rem;
-      font-size: 1.8rem;
-      color: #ffffff;
+      margin-top: 2.5rem;
+      font-size: 2rem;
+      color: #2b2b2b;
     }
 
     p {
       font-size: 1rem;
-      color: #a9b8c8;
+      color: #4a4a4a;
       margin-top: 0.5rem;
+      line-height: 1.6;
     }
 
     .btn {
       display: inline-block;
-      background-color: #00f0ff;
-      color: #0b0f1a;
+      background-color: #005bff;
+      color: white;
       padding: 0.75rem 1.5rem;
-      border-radius: 30px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s ease;
@@ -85,7 +64,7 @@
     }
 
     .btn:hover {
-      background-color: #00b8cc;
+      background-color: #0045c7;
     }
 
     .nav {
@@ -96,28 +75,39 @@
 
     .nav a {
       margin-left: 1rem;
-      color: #8899aa;
+      color: #005bff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.2s;
     }
 
     .nav a:hover {
-      color: #00f0ff;
+      color: #003d99;
     }
 
     footer {
-      margin-top: auto;
+      margin-top: 4rem;
       padding: 2rem 0;
       font-size: 0.8rem;
-      color: #555;
+      color: #999;
       text-align: center;
+    }
+
+    .section {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 800px;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
-  <div class="glow"></div>
-
   <div class="nav">
     <a href="#about">About</a>
     <a href="#divisions">Divisions</a>
@@ -129,19 +119,28 @@
     <h1>CRYODYNE SYSTEMS</h1>
     <p>Advanced Terraforming, Atmospheric Control, and Off-World Infrastructure</p>
 
-    <h2 id="about">Who We Are</h2>
-    <p>CryoDyne Systems is a pioneering interplanetary development company focused on engineering the future of human colonization. We lead in autonomous terraforming, exoplanet logistics, and atmospheric stabilization solutions.</p>
+    <div class="section" id="about">
+      <h2>Who We Are</h2>
+      <img class="image" src="https://images.unsplash.com/photo-1601297183301-27d3c6186bba?auto=format&fit=crop&w=1200&q=80" alt="Space tech image">
+      <p>CryoDyne Systems is a pioneering interplanetary development company focused on engineering the future of human colonization. We lead in autonomous terraforming, exoplanet logistics, and atmospheric stabilization solutions.</p>
+    </div>
 
-    <h2 id="divisions">Our Divisions</h2>
-    <p>
-      <strong>Echo Initiative</strong> – Deep-space resource retrieval & anomaly research<br>
-      <strong>Phase Development Group</strong> – Next-gen planetary biosphere engineering<br>
-      <strong>CryoFleet Operations</strong> – Off-world supply and fleet logistics
-    </p>
+    <div class="section" id="divisions">
+      <h2>Our Divisions</h2>
+      <img class="image" src="https://images.unsplash.com/photo-1581090700227-1f1f6201a962?auto=format&fit=crop&w=1200&q=80" alt="CryoDyne Divisions">
+      <p>
+        <strong>Echo Initiative</strong> – Deep-space resource retrieval & anomaly research<br>
+        <strong>Phase Development Group</strong> – Next-gen planetary biosphere engineering<br>
+        <strong>CryoFleet Operations</strong> – Off-world supply and fleet logistics
+      </p>
+    </div>
 
-    <h2 id="careers">Join the Future</h2>
-    <p>We're always looking for forward-thinkers, engineers, and mission-focused personnel. Explore our upcoming missions and off-world assignments by accessing our recruitment channel.</p>
-    <a href="#" class="btn">Explore Careers</a>
+    <div class="section" id="careers">
+      <h2>Join the Future</h2>
+      <img class="image" src="https://images.unsplash.com/photo-1600585154256-0c1c8472820c?auto=format&fit=crop&w=1200&q=80" alt="Join CryoDyne">
+      <p>We're always looking for forward-thinkers, engineers, and mission-focused personnel. Explore our upcoming missions and off-world assignments by accessing our recruitment channel.</p>
+      <a href="#" class="btn">Explore Careers</a>
+    </div>
   </div>
 
   <footer>
@@ -149,3 +148,4 @@
   </footer>
 </body>
 </html>
+
